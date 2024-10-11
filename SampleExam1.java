@@ -30,6 +30,20 @@ public class SampleExam1 {
         return c;
     }
 
+    public int smallest2(int a, int b, int c) {
+        int min = Integer.MAX_VALUE;
+        if (a > 0 && a < min) {
+            min = a;
+        }
+        if (b > 0 && b < min) {
+            min = b;
+        }
+        if (c > 0 && c < min) {
+            min = c;
+        }
+        return min;
+    }
+
     public boolean isPrime(int n) {
         if (n < 2) {
             return false;
