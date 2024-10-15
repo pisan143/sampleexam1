@@ -20,16 +20,6 @@ public class SampleExam1 {
         return calories;
     }
 
-    public int smallest(int a, int b, int c) {
-        if (a > 0 && a <= b && a <= c) {
-            return a;
-        }
-        if (b > 0 && b <= a && b <= c) {
-            return b;
-        }
-        return c;
-    }
-
     public int smallest2(int a, int b, int c) {
         int min = Integer.MAX_VALUE;
         if (a > 0 && a < min) {
@@ -148,7 +138,7 @@ public class SampleExam1 {
 
     public int[] arrForm(int num) {
         int[] arr = new int[4];
-        for (int i = 0; i < 4; i++) {
+        for (int i = 3; i >= 0; i--) {
             arr[i] = num % 10;
             num /= 10;
         }
@@ -239,6 +229,11 @@ public class SampleExam1 {
         double d = x * 2.5;
         x = 20;
         d = x / 3;
+        SampleExam1 se = new SampleExam1();
+        int[] x2 = se.arrForm(1234);
+        for (int i = 0; i < x2.length; i++) {
+            System.out.println(x2[i]);
+        }
 
     }
 }
